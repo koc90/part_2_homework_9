@@ -51,4 +51,3 @@ def main():
 if __name__ == "__main__":
     print("\n\n")
     main()
-    # Poprzednie zadanie zadziałało z uzyskanymi plikami *.json

@@ -57,9 +57,3 @@ def quotes(first_page_url):
             logging.error(f"Mission failed. Status code: {response.status_code}")
 
     return quotes_json, author_url_ends
-
-
-if __name__ == "__main__":
-    # próby
-    quotes_2_json = quotes(URL)
-    print(quotes_2_json)

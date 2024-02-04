@@ -93,14 +93,3 @@ def authors_async(urls):
             file=f,
         )
     return authors_json
-
-
-if __name__ == "__main__":
-    # próby
-    new_url = "https://quotes.toscrape.com/author/J-K-Rowling/"
-    response = requests.get(new_url)
-    soup = BeautifulSoup(response.text, "lxml")
-    body = soup.find("body")
-
-    list_2_json = scrap_author_from_soup(body)
-    print(list_2_json)
