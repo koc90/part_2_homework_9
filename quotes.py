@@ -1,6 +1,8 @@
 import requests, http, logging
 from bs4 import BeautifulSoup
-from url import url
+
+
+URL = "https://quotes.toscrape.com/"
 
 
 def scrap_quote_from_soup(body: BeautifulSoup):
@@ -46,7 +48,7 @@ def quotes(first_page_url):
 
             if next_li:
                 ext_url = next_li.find("a").get_attribute_list(key="href")[0][1::]
-                new_url = url + ext_url
+                new_url = URL + ext_url
 
             else:
                 break
@@ -59,5 +61,5 @@ def quotes(first_page_url):
 
 if __name__ == "__main__":
     # próby
-    quotes_2_json = quotes(url)
+    quotes_2_json = quotes(URL)
     print(quotes_2_json)

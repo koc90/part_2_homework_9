@@ -169,6 +169,8 @@ cython_debug/
 trash.py
 useless.py
 author_type.txt
+times.txt
+authors_url.txt
 
 # beacause of password
 URI.txt
